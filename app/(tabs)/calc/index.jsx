@@ -25,7 +25,6 @@ export default function ButtonBasics() {
       return;
     }
 
-    // Regla de números “prohibidos” (dejé tu lógica tal cual)
     if (n1 === 0 || n2 === 99) {
       Alert.alert('Se introdujo el número prohibido en A o B. No se puede sumar');
       return;
@@ -33,9 +32,9 @@ export default function ButtonBasics() {
 
     const r = n1 + n2;
 
-    // Navegar a la pantalla /resultado con los parámetros
+    // Vamos a la subpantalla de resultado dentro del tab "calc"
     router.push({
-      pathname: '/resultado',
+      pathname: '/(tabs)/calc/resultado',
       params: { a: String(n1), b: String(n2), r: String(r) },
     });
   };
@@ -109,5 +108,3 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 });
-
-

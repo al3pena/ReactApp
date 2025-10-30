@@ -10,8 +10,9 @@ export default function Resultado() {
       <Text style={styles.linea}>{a} + {b} =</Text>
       <Text style={styles.resultado}>{r}</Text>
 
-      <View style={{ marginTop: 24 }}>
+      <View style={{ marginTop: 24, gap: 12 }}>
         <Button title="Volver" onPress={() => router.back()} />
+        <Button title="Ir a Texto" onPress={() => router.push('/(tabs)/texto')} />
       </View>
     </View>
   );
